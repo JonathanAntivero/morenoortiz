@@ -329,3 +329,61 @@ img{max-width:100%;display:block;}
   html{scroll-behavior:auto;}
   .btn, .sector-card{transition:none;}
 }
+
+/* ===== Calendario ===== */
+.field-hint{font-size:.82rem;color:var(--ink-soft);margin:-6px 0 12px;}
+.calendar{border:1px solid var(--border);border-radius:8px;padding:18px;}
+.calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.cal-month{font-family:var(--serif);font-weight:600;color:var(--navy-900);font-size:1.05rem;}
+.cal-nav{
+  width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--white);
+  font-size:1.1rem;line-height:1;cursor:pointer;color:var(--navy-900);
+  display:flex;align-items:center;justify-content:center;
+}
+.cal-nav:hover{border-color:var(--gold);}
+.cal-nav:disabled{opacity:.35;cursor:not-allowed;}
+.calendar-weekdays{
+  display:grid;grid-template-columns:repeat(7,1fr);text-align:center;
+  font-size:.72rem;font-weight:700;color:var(--ink-soft);margin-bottom:6px;
+}
+.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.cal-day{
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;font-size:.85rem;border:none;background:none;color:var(--ink);
+  cursor:pointer;
+}
+.cal-day:hover:not(:disabled){background:var(--cream);}
+.cal-day:disabled{color:#d3cfc4;cursor:not-allowed;}
+.cal-day.empty{visibility:hidden;cursor:default;}
+.cal-day.selected{background:var(--navy-900);color:var(--white);font-weight:700;}
+.cal-day.today:not(.selected){border:1px solid var(--gold);}
+
+.time-slots{margin-top:18px;}
+.slots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px;}
+.slot-btn{
+  padding:11px 8px;border:1px solid var(--border);border-radius:6px;background:var(--white);
+  font-size:.85rem;font-weight:600;color:var(--ink);cursor:pointer;
+}
+.slot-btn:hover{border-color:var(--gold);}
+.slot-btn.selected{background:var(--navy-900);border-color:var(--navy-900);color:var(--white);}
+
+/* ================= LEGAL PAGE ================= */
+.legal-page{padding:60px 0 90px;background:var(--white);}
+.legal-container{max-width:760px;}
+.back-link{display:inline-block;margin-bottom:24px;font-weight:600;font-size:.9rem;color:var(--navy-900);}
+.legal-updated{font-size:.85rem;color:var(--ink-soft);margin-bottom:32px;}
+.legal-page h1{font-size:2.2rem;}
+.legal-page h2{font-size:1.25rem;margin-top:36px;color:var(--navy-900);}
+.legal-page p, .legal-page li{font-size:.95rem;color:var(--ink-soft);}
+.legal-page ul{padding-left:20px;margin-bottom:1em;}
+.legal-page a{color:var(--navy-900);font-weight:600;text-decoration:underline;}
+.legal-disclaimer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border);font-size:.8rem;font-style:italic;}
+
+.checkbox-row a{
+  color: var(--navy-900);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.checkbox-row a:hover{
+  color: var(--gold);
+}

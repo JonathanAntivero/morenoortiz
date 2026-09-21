@@ -14,14 +14,14 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="#inicio" class="logo">
-      <span class="logo-mark">N</span>
+      <span class="logo-mark">M</span>
       <span class="logo-text">MORENO<br>ORTIZ<small>ABOGADOS ASOCIADOS</small></span>
     </a>
     <nav class="main-nav">
       <a href="#firma">La Firma</a>
       <a href="#servicios">Servicios</a>
       <a href="#equipo">Equipo</a>
-      <a href="#experiencia" class="active">Experiencia</a>
+      <a href="#experiencia">Experiencia</a>
       <a href="#actualidad">Actualidad</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -207,6 +207,25 @@
 <section class="contact-body">
   <div class="container contact-grid">
     <form class="contact-form" id="reunionForm">
+      <p class="field-label">Seleccione fecha y hora *</p>
+<p class="field-hint">Elija la fecha que más le convenga. Horario en GMT-5 (Bogotá).</p>
+<div class="calendar" id="calendar">
+  <div class="calendar-header">
+    <button type="button" class="cal-nav" id="calPrev" aria-label="Mes anterior">‹</button>
+    <span class="cal-month" id="calMonthLabel"></span>
+    <button type="button" class="cal-nav" id="calNext" aria-label="Mes siguiente">›</button>
+  </div>
+  <div class="calendar-weekdays">
+    <span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span>
+  </div>
+  <div class="calendar-days" id="calDays"></div>
+</div>
+
+<div class="time-slots" id="timeSlots">
+  <p class="field-hint" id="timeSlotsLabel">Elija primero una fecha disponible.</p>
+  <div class="slots-grid" id="slotsGrid"></div>
+</div>
+<input type="hidden" name="fecha_hora" id="fechaHoraInput">
       <h3>Cuéntenos sobre su necesidad</h3>
       <div class="form-row">
         <input type="text" name="nombre" placeholder="Nombre y apellido *" required>
@@ -243,9 +262,9 @@
       <p class="char-hint">Máx. 1000 caracteres</p>
 
       <label class="checkbox-row">
-        <input type="checkbox" required>
-        Autorizo el tratamiento de mis datos personales conforme a la Política de Privacidad de Moreno Ortiz Abogados Asociados, disponible en este sitio web.
-      </label>
+  <input type="checkbox" name="consentimiento" required>
+  Autorizo el tratamiento de mis datos personales conforme a la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> de Moreno Ortiz Abogados Asociados.
+</label>
       <p class="small-print">La remisión de este formulario no constituye por sí misma una relación abogado-cliente.</p>
 
       <button type="submit" class="btn btn-primary btn-block">Solicitar reunión →</button>
@@ -340,7 +359,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <span class="logo-mark light">N</span>
+      <span class="logo-mark light">M</span>
       <span class="logo-text light">MORENO<br>ORTIZ<small>ABOGADOS ASOCIADOS</small></span>
     </div>
     <div class="footer-col">
