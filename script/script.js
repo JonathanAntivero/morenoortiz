@@ -223,3 +223,11 @@ if (calendarEl) {
 
   window.resetReunionCalendar = resetCalendar;
 }
+
+// ===== Registro del Service Worker (para funcionamiento offline / PWA) =====
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .catch((err) => console.error('Error registrando service worker:', err));
+  });
+}

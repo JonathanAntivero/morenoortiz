@@ -1,0 +1,16 @@
+{
+  "name": "Moreno Ortiz Abogados Asociados",
+  "short_name": "Moreno Ortiz",
+  "description": "Firma de abogados especializada en derecho laboral empresarial.",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#efe6d6",
+  "theme_color": "#0f2138",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "fotos/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "fotos/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "fotos/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
