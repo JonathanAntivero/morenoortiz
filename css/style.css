@@ -387,3 +387,44 @@ img{max-width:100%;display:block;}
 .checkbox-row a:hover{
   color: var(--gold);
 }
+
+/* ================= MODAL PERFIL ABOGADO ================= */
+.ver-perfil{
+  display:block;background:none;border:none;padding:0 18px 18px;
+  font-weight:600;font-size:.85rem;color:var(--navy-900);cursor:pointer;text-align:left;
+}
+.ver-perfil:hover{color:var(--gold);}
+
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(15,33,56,.55);
+  display:none;align-items:center;justify-content:center;
+  padding:24px;z-index:1000;
+}
+.modal-overlay.open{display:flex;}
+.modal-box{
+  background:var(--white);border-radius:10px;max-width:640px;width:100%;
+  max-height:88vh;overflow-y:auto;position:relative;
+  display:grid;grid-template-columns:200px 1fr;
+}
+.modal-close{
+  position:absolute;top:14px;right:14px;
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--border);
+  background:var(--white);cursor:pointer;font-size:1rem;color:var(--navy-900);
+  display:flex;align-items:center;justify-content:center;z-index:2;
+}
+.modal-close:hover{border-color:var(--gold);}
+.modal-photo{
+  background:linear-gradient(135deg,var(--navy-700),var(--navy-900));
+  min-height:200px;
+}
+.modal-content{padding:30px;}
+.modal-content h3{font-size:1.35rem;margin-bottom:2px;}
+.modal-especialidad{font-weight:600;color:var(--navy-900);font-size:.9rem;margin-top:10px;}
+.modal-detalles{list-style:none;padding:0;margin:16px 0 22px;display:flex;flex-direction:column;gap:8px;}
+.modal-detalles li{font-size:.85rem;color:var(--ink-soft);}
+.modal-detalles li strong{color:var(--navy-900);}
+
+@media (max-width:600px){
+  .modal-box{grid-template-columns:1fr;}
+  .modal-photo{min-height:140px;}
+}

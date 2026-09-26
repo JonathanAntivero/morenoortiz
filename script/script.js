@@ -231,3 +231,91 @@ if ('serviceWorker' in navigator) {
       .catch((err) => console.error('Error registrando service worker:', err));
   });
 }
+
+// ===== Modal de perfil de abogado =====
+const ABOGADOS = {
+  david: {
+    nombre: 'David Sebastián Ortiz Rodríguez',
+    rol: 'Socio',
+    especialidad: 'Derecho laboral empresarial y relaciones colectivas',
+    bio: 'Cuenta con amplia trayectoria asesorando a empresas de distintos sectores en la prevención y gestión de riesgos laborales, así como en procesos de negociación colectiva.',
+    detalles: [
+      'Universidad: (completar)',
+      'Años de experiencia: (completar)',
+      'Idiomas: Español, Inglés'
+    ]
+  },
+  camila: {
+    nombre: 'María Camila Gómez Valencia',
+    rol: 'Asociada Senior',
+    especialidad: 'Derecho laboral individual y seguridad social',
+    bio: 'Se especializa en el acompañamiento de empresas en temas de contratación, terminación de contratos y cumplimiento en materia de seguridad social.',
+    detalles: [
+      'Universidad: (completar)',
+      'Años de experiencia: (completar)',
+      'Idiomas: Español, Inglés'
+    ]
+  },
+  andres: {
+    nombre: 'Andrés Felipe Molina Castaño',
+    rol: 'Asociado',
+    especialidad: 'Procesos disciplinarios y litigios laborales',
+    bio: 'Enfocado en el diseño y defensa de procesos disciplinarios, así como en la representación de empresas en litigios laborales ante distintas instancias.',
+    detalles: [
+      'Universidad: (completar)',
+      'Años de experiencia: (completar)',
+      'Idiomas: Español'
+    ]
+  }
+};
+
+const perfilModal = document.getElementById('perfilModal');
+
+if (perfilModal) {
+  const perfilFoto = document.getElementById('perfilFoto');
+  const perfilNombre = document.getElementById('perfilNombre');
+  const perfilRol = document.getElementById('perfilRol');
+  const perfilEspecialidad = document.getElementById('perfilEspecialidad');
+  const perfilBio = document.getElementById('perfilBio');
+  const perfilDetalles = document.getElementById('perfilDetalles');
+  const perfilClose = document.getElementById('perfilClose');
+
+  function abrirPerfil(id) {
+    const datos = ABOGADOS[id];
+    if (!datos) return;
+
+    perfilNombre.textContent = datos.nombre;
+    perfilRol.textContent = datos.rol;
+    perfilEspecialidad.textContent = datos.especialidad;
+    perfilBio.textContent = datos.bio;
+
+    perfilDetalles.innerHTML = '';
+    datos.detalles.forEach((linea) => {
+      const li = document.createElement('li');
+      li.textContent = linea;
+      perfilDetalles.appendChild(li);
+    });
+
+    perfilModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function cerrarPerfil() {
+    perfilModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.ver-perfil').forEach((btn) => {
+    btn.addEventListener('click', () => abrirPerfil(btn.dataset.abogado));
+  });
+
+  perfilClose.addEventListener('click', cerrarPerfil);
+
+  perfilModal.addEventListener('click', (e) => {
+    if (e.target === perfilModal) cerrarPerfil();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && perfilModal.classList.contains('open')) cerrarPerfil();
+  });
+}

@@ -28,7 +28,6 @@
       <a href="#equipo">Equipo</a>
       <a href="#experiencia">Experiencia</a>
       <a href="#actualidad">Actualidad</a>
-      <a href="#contacto">Contacto</a>
     </nav>
     <a href="#contacto" class="btn btn-primary btn-nav">Agendar una reunión</a>
     <button class="nav-toggle" aria-label="Abrir menú">
@@ -44,8 +43,7 @@
     <h1>Experiencia y sectores</h1>
     <p class="hero-sub">Acompañamos a empresas de diferentes industrias con soluciones jurídicas laborales efectivas y estratégicas.</p>
     <div class="hero-actions">
-      <a href="#firma" class="btn btn-cream">Conozca la firma →</a>
-      <a href="#contacto" class="btn btn-outline-light">Agendar una reunión →</a>
+      <a href="#firma" class="btn btn-cream">Conozca la firma</a>
     </div>
   </div>
 </section>
@@ -175,27 +173,28 @@
       <p>Profesionales con experiencia y enfoque práctico, comprometidos con brindar una atención personalizada y un acompañamiento legal estratégico.</p>
     </div>
     <div class="team-cards">
-      <div class="team-card">
-        <div class="team-photo"></div>
-        <h4>David Sebastián Ortiz Rodríguez</h4>
-        <span class="role">Socio</span>
-        <p>Derecho laboral empresarial y relaciones colectivas</p>
-        <a href="#">Ver perfil →</a>
-      </div>
-      <div class="team-card">
-        <div class="team-photo"></div>
-        <h4>María Camila Gómez Valencia</h4>
-        <span class="role">Asociada Senior</span>
-        <p>Derecho laboral individual y seguridad social</p>
-        <a href="#">Ver perfil →</a>
-      </div>
-      <div class="team-card">
-        <div class="team-photo"></div>
-        <h4>Andrés Felipe Molina Castaño</h4>
-        <span class="role">Asociado</span>
-        <p>Procesos disciplinarios y litigios laborales</p>
-        <a href="#">Ver perfil →</a>
-      </div>
+  <div class="team-card">
+    <div class="team-photo"></div>
+    <h4>David Sebastián Ortiz Rodríguez</h4>
+    <span class="role">Socio</span>
+    <p>Derecho laboral empresarial y relaciones colectivas</p>
+    <button type="button" class="ver-perfil" data-abogado="david">Ver perfil</button>
+  </div>
+  <div class="team-card">
+    <div class="team-photo"></div>
+    <h4>María Camila Gómez Valencia</h4>
+    <span class="role">Asociada Senior</span>
+    <p>Derecho laboral individual y seguridad social</p>
+    <br><button type="button" class="ver-perfil" data-abogado="camila">Ver perfil</button>
+  </div>
+  <div class="team-card">
+    <div class="team-photo"></div>
+    <h4>Andrés Felipe Molina Castaño</h4>
+    <span class="role">Asociado</span>
+    <p>Procesos disciplinarios y litigios laborales</p>
+    <br><button type="button" class="ver-perfil" data-abogado="andres">Ver perfil</button>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -386,6 +385,22 @@
     </div>
   </div>
 </footer>
+
+<!-- ===================== MODAL PERFIL ABOGADO ===================== -->
+<div class="modal-overlay" id="perfilModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="perfilNombre">
+    <button type="button" class="modal-close" id="perfilClose" aria-label="Cerrar">✕</button>
+    <div class="modal-photo" id="perfilFoto"></div>
+    <div class="modal-content">
+      <h3 id="perfilNombre"></h3>
+      <span class="role" id="perfilRol"></span>
+      <p class="modal-especialidad" id="perfilEspecialidad"></p>
+      <p id="perfilBio"></p>
+      <ul class="modal-detalles" id="perfilDetalles"></ul>
+      <a href="index.html#contacto" class="btn btn-primary">Agendar una reunión →</a>
+    </div>
+  </div>
+</div>
 
 <script src="script/script.js"></script>
 </body>
