@@ -488,3 +488,11 @@ img{max-width:100%;display:block;}
   .modal-box{grid-template-columns:1fr;}
   .modal-photo{min-height:140px;}
 }
+
+img, iframe, video, table {
+  max-width: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
+}
