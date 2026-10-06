@@ -237,6 +237,7 @@ const ABOGADOS = {
   david: {
     nombre: 'David Sebastián Ortiz Rodríguez',
     rol: 'Socio',
+    foto: 'fotos/foto01.jpg',
     especialidad: 'Derecho laboral empresarial y relaciones colectivas',
     bio: 'Cuenta con amplia trayectoria asesorando a empresas de distintos sectores en la prevención y gestión de riesgos laborales, así como en procesos de negociación colectiva.',
     detalles: [
@@ -248,6 +249,7 @@ const ABOGADOS = {
   camila: {
     nombre: 'María Camila Gómez Valencia',
     rol: 'Asociada Senior',
+    foto: 'fotos/foto02.jpg',
     especialidad: 'Derecho laboral individual y seguridad social',
     bio: 'Se especializa en el acompañamiento de empresas en temas de contratación, terminación de contratos y cumplimiento en materia de seguridad social.',
     detalles: [
@@ -259,6 +261,7 @@ const ABOGADOS = {
   andres: {
     nombre: 'Andrés Felipe Molina Castaño',
     rol: 'Asociado',
+    foto: 'fotos/foto03.jpg',
     especialidad: 'Procesos disciplinarios y litigios laborales',
     bio: 'Enfocado en el diseño y defensa de procesos disciplinarios, así como en la representación de empresas en litigios laborales ante distintas instancias.',
     detalles: [
@@ -283,7 +286,7 @@ if (perfilModal) {
   function abrirPerfil(id) {
     const datos = ABOGADOS[id];
     if (!datos) return;
-
+perfilFoto.style.backgroundImage = `url('${datos.foto}')`;
     perfilNombre.textContent = datos.nombre;
     perfilRol.textContent = datos.rol;
     perfilEspecialidad.textContent = datos.especialidad;
