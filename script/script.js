@@ -331,3 +331,6 @@ perfilFoto.style.backgroundImage = `url('${datos.foto}')`;
     if (e.key === 'Escape' && perfilModal.classList.contains('open')) cerrarPerfil();
   });
 }
+
+// ===== Íconos Lucide =====
+if (window.lucide) lucide.createIcons();

@@ -69,6 +69,11 @@ img{max-width:100%;display:block;}
   display:flex;align-items:center;justify-content:space-between;
   padding:14px 32px;gap:24px;
 }
+.logo-icono{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+}
 .logo{display:flex;align-items:center;gap:12px;}
 .logo-mark{
   width:44px;height:44px;border-radius:50%;
@@ -540,4 +545,30 @@ html, body {
 .noticia-foto{
   width:100%;max-height:320px;object-fit:cover;
   border-radius:8px;margin:16px 0;
+}
+
+/* ===== Íconos de línea (Lucide) ===== */
+.sector-icon svg, .service-icon svg, .highlight-icon svg,
+.pillar-icon svg, .step-icon svg, .newsletter-icon svg{
+  width:30px;height:30px;
+  stroke:var(--gold);
+  stroke-width:1.5;
+  fill:none;
+}
+.chip span svg{
+  width:22px;height:22px;
+  stroke:var(--navy-800);
+  stroke-width:1.6;
+  fill:none;
+}
+.contact-list li span svg{
+  width:22px;height:22px;
+  stroke:var(--gold);
+  stroke-width:1.6;
+  fill:none;
+}
+
+.justificado{
+  text-align:justify;
+  hyphens:auto;
 }
