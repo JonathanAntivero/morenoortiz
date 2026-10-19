@@ -70,8 +70,8 @@ img{max-width:100%;display:block;}
   padding:14px 32px;gap:24px;
 }
 .logo-icono{
-  width:100px;
-  height:100px;
+  width:80px;
+  height:80px;
   border-radius:50%;
 }
 .logo{display:flex;align-items:center;gap:12px;}
