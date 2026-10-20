@@ -336,16 +336,12 @@ img{max-width:100%;display:block;}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:960px){
-  .logo-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-}
-
-@media (max-width:480px){
-  .logo-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-  }
-  .logo-chip{
-    height:48px;
+  .main-nav{
+    display:none;
+    position:fixed;top:73px;left:0;right:0;bottom:0;
+    background:var(--white);
+    flex-direction:column;align-items:flex-start;gap:0;
+    padding:20px 32px;overflow-y:auto;z-index:99;
   }
   .main-nav.open{display:flex;}
   .main-nav a{width:100%;padding:16px 0;border-bottom:1px solid var(--border);font-size:1.05rem;}
@@ -354,7 +350,7 @@ img{max-width:100%;display:block;}
   .sector-grid, .services-grid{grid-template-columns:repeat(2,1fr);}
   .highlight-grid, .pillars, .process-grid, .news-grid, .team-cards{grid-template-columns:1fr;}
   .about-grid, .team-grid, .contact-grid{grid-template-columns:1fr;}
-  .logo-grid{grid-template-columns:repeat(4,1fr);}
+  .logo-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
   .form-row{grid-template-columns:1fr;}
   .chip-grid{grid-template-columns:repeat(2,1fr);}
   .footer-grid{grid-template-columns:1fr;}
@@ -372,7 +368,8 @@ img{max-width:100%;display:block;}
   .section-title{font-size:1.5rem;}
   .sector-grid, .services-grid, .chip-grid{grid-template-columns:1fr;}
   .chip-grid.three{grid-template-columns:1fr;}
-  .logo-grid{grid-template-columns:repeat(3,1fr);gap:18px;}
+  .logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+  .logo-chip{height:48px;}
   .stats-grid{gap:28px;}
   .stat strong{font-size:1.7rem;}
   .contact-form{padding:22px;}
