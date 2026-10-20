@@ -12,7 +12,7 @@
   --border:#e4ddce;
   --white:#ffffff;
   --radius:6px;
-  --serif:'Cormorant Garamond', serif;
+  --sans:'Inter', sans-serif;
   --sans:'Inter', sans-serif;
   --maxw:1180px;
 }
@@ -155,8 +155,10 @@ img{max-width:100%;display:block;}
   align-items:center;justify-items:center;
 }
 .logo-chip{
-  width:56px;height:56px;border-radius:50%;
-  background:linear-gradient(135deg,#e3e3e3,#bdbdbd);opacity:.75;
+  height:68px;
+  width:auto;
+  max-width:130px;
+  object-fit:contain;
 }
 
 /* ================= SECTORS ================= */
