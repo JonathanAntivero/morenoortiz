@@ -1,18 +1,18 @@
 /* ================= VARIABLES ================= */
 :root{
-  --navy-900:#0f2138;
-  --navy-800:#152c46;
-  --navy-700:#1c3a5e;
-  --cream:#efe6d6;
-  --cream-light:#f7f3ea;
-  --gold:#b4884f;
-  --gold-light:#c9a06a;
-  --ink:#1f2a37;
+  --navy-900:#19376e;
+  --navy-800:#19376e;
+  --navy-700:#19376e;
+  --cream:#ecebe7;;
+  --cream-light:#f7f6f3;
+  --gold:#e6b473;
+  --gold-light:#ddbd77;
+  --ink:#1f3735;
   --ink-soft:#5a6472;
-  --border:#e4ddce;
+  --border:#e4cece;
   --white:#ffffff;
   --radius:6px;
-  --serif:'Cormorant Garamond', serif;
+  --serif:'Inter', sans-serif;
   --sans:'Inter', sans-serif;
   --maxw:1180px;
 }
@@ -21,13 +21,11 @@
 html{scroll-behavior:smooth;}
 body{
   margin:0;
-  font-family:var(--sans);
   color:var(--ink);
   background:var(--white);
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4{
-  font-family:var(--serif);
   color:var(--navy-900);
   margin:0 0 .5em;
   font-weight:600;
@@ -79,22 +77,22 @@ img{max-width:100%;display:block;}
   width:44px;height:44px;border-radius:50%;
   background:var(--navy-900);color:var(--white);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:1.4rem;font-weight:700;
+  font-family: 'Inter', sans-serif;font-size:1.4rem;font-weight:700;
   flex-shrink:0;
 }
 .logo-mark.light{background:var(--white);color:var(--navy-900);}
 .logo-text{
-  font-family:var(--serif);font-weight:700;color:var(--navy-900);
+  font-family: 'Inter', sans-serif;font-weight:700;color:var(--navy-900);
   font-size:1.05rem;line-height:1.15;letter-spacing:.03em;
 }
 .logo-text small{
-  display:block;font-family:var(--sans);font-weight:600;font-size:.55rem;
+  display:block;font-family: 'Inter', sans-serif;font-weight:600;font-size:.55rem;
   letter-spacing:.14em;color:var(--gold);margin-top:2px;
 }
 .logo-text.light{color:var(--white);}
 .main-nav{display:flex;gap:28px;flex:1;justify-content:center;}
 .main-nav a{
-  font-size:.92rem;font-weight:500;color:var(--ink);
+  font-size:.92rem;font-weight:600;color:var(--ink);
   padding:6px 2px;border-bottom:2px solid transparent;
 }
 .main-nav a:hover, .main-nav a.active{color:var(--navy-900);border-color:var(--gold);}
@@ -138,7 +136,7 @@ img{max-width:100%;display:block;}
 .section-title{font-size:1.9rem;max-width:640px;}
 .section-title.center{text-align:center;margin-left:auto;margin-right:auto;}
 .section-title-sm{
-  text-align:center;font-family:var(--serif);font-size:1.3rem;
+  text-align:center;font-family: 'Inter', sans-serif;font-size:1.3rem;
   color:var(--navy-900);position:relative;padding-bottom:16px;margin-bottom:36px;
 }
 .section-title-sm::after{
@@ -187,7 +185,7 @@ img{max-width:100%;display:block;}
 .stats-bar{background:var(--navy-900);padding:56px 0;}
 .stats-grid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;}
 .stat{text-align:center;color:var(--white);}
-.stat strong{display:block;font-family:var(--serif);font-size:2.2rem;color:var(--gold-light);}
+.stat strong{display:block;font-family: 'Inter', sans-serif;font-size:2.2rem;color:var(--gold-light);}
 .stat span{font-size:.9rem;color:#c7cedb;}
 
 /* ================= HIGHLIGHTS ================= */
@@ -233,7 +231,7 @@ img{max-width:100%;display:block;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
 .contact-form input, .contact-form textarea{
   width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:5px;
-  font-family:var(--sans);font-size:.92rem;color:var(--ink);
+  font-family: 'Inter', sans-serif;font-size:.92rem;color:var(--ink);
 }
 .contact-form textarea{min-height:110px;resize:vertical;}
 .field-label{font-weight:600;font-size:.9rem;margin:20px 0 10px;color:var(--navy-900);}
@@ -422,7 +420,7 @@ img{max-width:100%;display:block;}
 .field-hint{font-size:.82rem;color:var(--ink-soft);margin:-6px 0 12px;}
 .calendar{border:1px solid var(--border);border-radius:8px;padding:18px;}
 .calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-.cal-month{font-family:var(--serif);font-weight:600;color:var(--navy-900);font-size:1.05rem;}
+.cal-month{font-family: 'Inter', sans-serif;font-weight:600;color:var(--navy-900);font-size:1.05rem;}
 .cal-nav{
   width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:var(--white);
   font-size:1.1rem;line-height:1;cursor:pointer;color:var(--navy-900);
@@ -525,6 +523,10 @@ img, iframe, video, table {
 
 html, body {
   overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
 
 /* ================= NOTICIA ÚNICA / PÁGINA DE ARTÍCULO ================= */
