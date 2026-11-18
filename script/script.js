@@ -245,38 +245,46 @@ if ('serviceWorker' in navigator) {
 const ABOGADOS = {
   david: {
     nombre: 'David Sebastián Ortiz Rodríguez',
-    rol: 'Socio',
+    rol: 'Abogado Especialista en Derecho Laboral, Seguridad Social y Derecho Empresarial',
     foto: 'fotos/foto01.jpg',
-    especialidad: 'Derecho laboral empresarial y relaciones colectivas',
-    bio: 'Cuenta con amplia trayectoria asesorando a empresas de distintos sectores en la prevención y gestión de riesgos laborales, así como en procesos de negociación colectiva.',
+    especialidad: 'Especialista en Derecho Laboral y de la Seguridad Social, así como en Derecho Empresarial y de los Negocios, de la misma casa universitaria',
+    bio: 'Con mención académica en profundización en Derecho Constitucional y Derechos Humanos. Ha desarrollado su trayectoria en destacadas firmas de abogados, donde ha liderado y acompañado procesos complejos en materia laboral, disciplinaria y de seguridad social. Asimismo, ha asesorado jurídicamente a empresas de diversos sectores transporte, retail, grandes superficies y agroindustrial brindando soluciones integrales y adaptadas a las particularidades operativas de cada industria.', 
     detalles: [
-      'Universidad: (completar)',
-      'Años de experiencia: (completar)',
-      'Idiomas: Español, Inglés'
+      'Universidad: Universidad del Rosario',
+      'Experiencia:  Cuenta con amplia experiencia en consultoría jurídica preventiva y curativa, negociación colectiva, estructuración de políticas internas, dirección de procesos disciplinarios y representación judicial en litigios estratégicos.',
     ]
   },
-  camila: {
-    nombre: 'María Camila Gómez Valencia',
-    rol: 'Asociada Senior',
-    foto: 'fotos/foto02.jpg',
-    especialidad: 'Derecho laboral individual y seguridad social',
-    bio: 'Se especializa en el acompañamiento de empresas en temas de contratación, terminación de contratos y cumplimiento en materia de seguridad social.',
-    detalles: [
-      'Universidad: (completar)',
-      'Años de experiencia: (completar)',
-      'Idiomas: Español, Inglés'
-    ]
-  },
-  andres: {
-    nombre: 'Andrés Felipe Molina Castaño',
-    rol: 'Asociado',
+  helen: {
+  nombre:'Helen Valentina Ortiz Barahona',
+  rol:'Abogada',
+  foto:'fotos/foto02.jpg',
+  especialidad:'',
+  bio:'Ha desarrollado su experiencia profesional en áreas jurídicas de compañías y firmas especializadas, fortaleciendo sus competencias en Derecho Laboral, Seguridad Social y acompañamiento a procesos de Gestión Humana. Actualmente se encuentra vinculada a MORENO ORTIZ ABOGADOS ASOCIADOS S.A.S., apoyando la atención jurídica y administrativa de los asuntos laborales de los clientes de la firma.',
+  detalles:[
+    'Universidad: Universidad Católica de Colombia, donde obtuvo grado de honor por alcanzar el mejor promedio académico de su promoción y fue eximida de la totalidad de los exámenes preparatorios por su destacado desempeño académico',
+    'Experiencia: Derecho Laboral, asesoría jurídica empresarial, procesos disciplinarios, elaboración de documentos laborales, terminaciones contractuales, derechos de petición y acciones de tutela.',
+  ]
+},
+  santiago: {
+    nombre: 'Santiago Velasco Vergara',
+    rol: 'Abogado especializado en Derecho Laboral y Pensional',
     foto: 'fotos/foto03.jpg',
-    especialidad: 'Procesos disciplinarios y litigios laborales',
-    bio: 'Enfocado en el diseño y defensa de procesos disciplinarios, así como en la representación de empresas en litigios laborales ante distintas instancias.',
+    especialidad: 'Diplomados en Derecho Laboral y Seguridad Social, Fundamentos de Derecho Administrativo, Administración Inmobiliaria y Litigio Estratégico.',
+    bio: 'Amplia trayectoria desempeñándose en reconocidas firmas de abogados y como asesor externo en materia laboral, seguridad social, derecho civil e inmobiliario. Ha representado judicialmente a empresas y organizaciones en procesos ordinarios laborales, litigios civiles e inmobiliarios, así como en controversias relacionadas con el Sistema General de Seguridad Social en Salud y Pensiones.',
     detalles: [
-      'Universidad: (completar)',
-      'Años de experiencia: (completar)',
-      'Idiomas: Español'
+      'Universidad: Universidad Autónoma de Colombia',
+      'Experiencia: más de ocho (8) años como asesor jurídico en el sector privado, desempeñándose en reconocidas firmas de abogados y como asesor externo en materia laboral, seguridad social, derecho civil e inmobiliario. Ha representado judicialmente a empresas y organizaciones en procesos ordinarios laborales, litigios civiles e inmobiliarios, así como en controversias relacionadas con el Sistema General de Seguridad Social en Salud y Pensiones.',
+    ]
+  },
+  tania: {
+    nombre: 'Tania Lucía Matos Drago',
+    rol: 'Abogada Asociada',
+    foto: 'fotos/foto04.jpg',
+    especialidad: 'Especialista en Gestión de Proyectos para el Desarrollo y Magíster en Gerencia para el Desarrollo',
+    bio: 'Su ejercicio profesional se enfoca en la dirección estratégica de áreas de Gestión Humana, el fortalecimiento de las estructuras organizacionales y el acompañamiento a empresas en procesos de reestructuración empresarial. Su práctica profesional se caracteriza por integrar la gestión del talento humano con los objetivos estratégicos de las organizaciones, promoviendo la eficiencia operativa, el fortalecimiento institucional y la sostenibilidad empresarial.',
+    detalles: [
+      'Universidad: Egresada de la Universidad del Rosario. Especialista en Gestión de Proyectos para el Desarrollo y magíster en Gerencia para el Desarrollo, ambos títulos de posgrado obtenidos en la Universidad Externado de Colombia.',
+      'Experiencia: Dirección y coordinación de procesos de Gestión Humana, administración del talento humano, diseño e implementación de estrategias organizacionales y acompañamiento en procesos de transformación y reestructuración empresarial.',
     ]
   }
 };
@@ -334,3 +342,35 @@ perfilFoto.style.backgroundImage = `url('${datos.foto}')`;
 
 // ===== Íconos Lucide =====
 if (window.lucide) lucide.createIcons();
+
+// ===== CARRUSEL DE NOTICIAS =====
+
+  document.querySelectorAll('.news-carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.news-track');
+    var prev = carousel.querySelector('.news-prev');
+    var next = carousel.querySelector('.news-next');
+
+    function paso() {
+      var card = track.querySelector('.news-card');
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card.offsetWidth + gap;
+    }
+
+    function actualizar() {
+      var hayDesborde = track.scrollWidth > track.clientWidth + 1;
+      prev.hidden = next.hidden = !hayDesborde;
+      prev.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+    }
+
+    prev.addEventListener('click', function () {
+      track.scrollBy({ left: -paso(), behavior: 'smooth' });
+    });
+    next.addEventListener('click', function () {
+      track.scrollBy({ left: paso(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', actualizar);
+    window.addEventListener('resize', actualizar);
+    actualizar();
+  });

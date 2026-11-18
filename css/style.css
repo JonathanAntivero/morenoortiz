@@ -558,7 +558,7 @@ body {
   border-radius:8px;margin:16px 0;
 }
 
-/* ===== Íconos de línea (Lucide) ===== */
+/* ===== Íconos de línea ===== */
 .sector-icon svg, .service-icon svg, .highlight-icon svg,
 .pillar-icon svg, .step-icon svg, .newsletter-icon svg{
   width:30px;height:30px;
@@ -582,4 +582,86 @@ body {
 .justificado{
   text-align:justify;
   hyphens:auto;
+}
+
+.team-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ================= LOGO EN NUESTRO EQUIPO ================= */
+.team-logo {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 82px;
+  border-radius: 50%;
+}
+
+/* ================= LOGO EN NUESTRO EQUIPO, RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .team-intro {
+    align-items: center;
+  }
+
+  .team-logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+  }
+}
+
+/* ================= CARRUSEL DE NOTICIAS ================= */
+
+.news-carousel {
+  position: relative;
+}
+
+.news-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.news-track::-webkit-scrollbar {
+  display: none;
+}
+
+.news-card {
+  flex: 0 0 calc((100% - 48px) / 3); /* 3 tarjetas en PC */
+  scroll-snap-align: start;
+}
+
+.news-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+.news-prev { left: 32px; }
+.news-next { right: 32px; }
+.news-arrow:disabled { opacity: 0.35; cursor: default; }
+.news-arrow[hidden] { display: none; }
+
+@media (max-width: 992px) {
+  .news-card { flex-basis: calc((100% - 24px) / 2); } /* 2 en tablet */
+}
+
+@media (max-width: 600px) {
+  .news-card { flex-basis: 100%; }                    /* 1 en celular */
+  .news-prev { left: 4px; }
+  .news-next { right: 4px; }
 }
